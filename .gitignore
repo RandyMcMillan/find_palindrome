@@ -1,0 +1,12 @@
+find_palindrome.xcodeproj/project.xcworkspace
+find_palindrome
+src/.deps/
+src/.dirstamp
+src/main.o
+aclocal.m4
+Makefile
+Makefile.in
+compile
+configure~
+depcomp
+missing

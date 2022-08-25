@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B85386A28B7CF4000556183 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B85386928B7CF4000556183 /* main.c */; };
+		4B21A2ED28B7D4EA006E1BCB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B21A2EC28B7D385006E1BCB /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4B85386628B7CF4000556183 /* find-palindrome */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "find-palindrome"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B85386928B7CF4000556183 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4B21A2EC28B7D385006E1BCB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4B85386628B7CF4000556183 /* find_palindrome */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = find_palindrome; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,10 +38,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B21A2EB28B7D385006E1BCB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4B21A2EC28B7D385006E1BCB /* main.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		4B85385D28B7CF4000556183 = {
 			isa = PBXGroup;
 			children = (
-				4B85386828B7CF4000556183 /* find-palindrome */,
+				4B21A2EB28B7D385006E1BCB /* src */,
 				4B85386728B7CF4000556183 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +57,17 @@
 		4B85386728B7CF4000556183 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B85386628B7CF4000556183 /* find-palindrome */,
+				4B85386628B7CF4000556183 /* find_palindrome */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		4B85386828B7CF4000556183 /* find-palindrome */ = {
-			isa = PBXGroup;
-			children = (
-				4B85386928B7CF4000556183 /* main.c */,
-			);
-			path = "find-palindrome";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B85386528B7CF4000556183 /* find-palindrome */ = {
+		4B85386528B7CF4000556183 /* find_palindrome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B85386D28B7CF4000556183 /* Build configuration list for PBXNativeTarget "find-palindrome" */;
+			buildConfigurationList = 4B85386D28B7CF4000556183 /* Build configuration list for PBXNativeTarget "find_palindrome" */;
 			buildPhases = (
 				4B85386228B7CF4000556183 /* Sources */,
 				4B85386328B7CF4000556183 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = "find-palindrome";
+			name = find_palindrome;
 			productName = "find-palindrome";
-			productReference = 4B85386628B7CF4000556183 /* find-palindrome */;
+			productReference = 4B85386628B7CF4000556183 /* find_palindrome */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4B85386128B7CF4000556183 /* Build configuration list for PBXProject "find-palindrome" */;
+			buildConfigurationList = 4B85386128B7CF4000556183 /* Build configuration list for PBXProject "find_palindrome" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B85386528B7CF4000556183 /* find-palindrome */,
+				4B85386528B7CF4000556183 /* find_palindrome */,
 			);
 		};
 /* End PBXProject section */
@@ -119,7 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B85386A28B7CF4000556183 /* main.c in Sources */,
+				4B21A2ED28B7D4EA006E1BCB /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +129,9 @@
 		4B85386B28B7CF4000556183 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -176,18 +178,22 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "find-palindrome";
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
 		4B85386C28B7CF4000556183 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -228,10 +234,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "find-palindrome";
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -241,6 +249,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M684FYCYG6;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_NO_PIE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +260,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M684FYCYG6;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_NO_PIE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -258,7 +268,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B85386128B7CF4000556183 /* Build configuration list for PBXProject "find-palindrome" */ = {
+		4B85386128B7CF4000556183 /* Build configuration list for PBXProject "find_palindrome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B85386B28B7CF4000556183 /* Debug */,
@@ -267,7 +277,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B85386D28B7CF4000556183 /* Build configuration list for PBXNativeTarget "find-palindrome" */ = {
+		4B85386D28B7CF4000556183 /* Build configuration list for PBXNativeTarget "find_palindrome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B85386E28B7CF4000556183 /* Debug */,
